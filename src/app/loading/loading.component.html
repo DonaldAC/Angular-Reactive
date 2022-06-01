@@ -1,0 +1,11 @@
+<!-- The advantages of this simple design is: By using the an observable an by consuming it
+    here in our template, this means that the loading component is completely unaware of how 
+    our angular app is structured.
+    The loading component is not aware of any component in the application that want to show
+    the loading indicator.
+    The loading component simply know about the loading observable of the share loading service.
+-->
+
+<div class="spinner-container" *ngIf="loadingService.loading$ | async">
+  <mat-spinner></mat-spinner>
+</div>

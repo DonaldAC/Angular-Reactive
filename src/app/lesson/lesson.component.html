@@ -1,0 +1,15 @@
+<div class="lesson-detail">
+  <h3>{{lesson.description}}</h3>
+
+  <h5>{{lesson.duration}}</h5>
+
+  <iframe
+    width="400"
+    heigth="220"
+    frameborder="0"
+    allowfullscreen
+    [src]="('https://www.youtube.com/embed/' + lesson?.videoId) | safeUrl"
+  >
+</iframe>
+
+</div>
